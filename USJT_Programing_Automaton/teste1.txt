@@ -1,0 +1,74 @@
+import java.util.*;
+public class teste1 {
+	static Scanner ins = new Scanner(System.in);
+	static int p=0;
+	static String f;
+	static void aceita(){
+		System.out.printf("Aceita \n");
+		System.exit(0);
+	}
+	static void rejeita(){
+		System.out.printf("Rejeita \n");
+		System.exit(0);
+	}
+	public static void main(String[] args){
+		p=0;
+		System.out.println("Palavra?");
+		f = ins.next()+"!";
+		e1();
+	}
+	static void e1(){
+		if(f.substring(p,p+1).equals("a")){
+			p++;
+			e2();
+		}
+		else if(f.substring(p,p+1).equals("b")){
+			p++;
+			e2();
+		}
+		else if(f.substring(p,p+1).equals("c")){
+			p++;
+			e3();
+		}
+		else{
+			rejeita();
+		}
+	}
+	static void e2(){
+		if(f.substring(p,p+1).equals("a")){
+			p++;
+			e2();
+		}
+		else if(f.substring(p,p+1).equals("b")){
+			p++;
+			e2();
+		}
+		else if(f.substring(p,p+1).equals("c")){
+			p++;
+			e3();
+		}
+		else{
+			rejeita();
+		}
+	}
+	static void e3(){
+		if(f.substring(p,p+1).equals("a")){
+			p++;
+			e3();
+		}
+		else if(f.substring(p,p+1).equals("b")){
+			p++;
+			e3();
+		}
+		else if(f.substring(p,p+1).equals("c")){
+			p++;
+			e3();
+		}
+		else if(f.substring(p,p+1).equals("!")){
+			aceita();
+		}
+		else{
+			rejeita();
+		}
+	}
+}

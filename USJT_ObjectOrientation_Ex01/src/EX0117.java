@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.Scanner;
+public class EX0117
+{
+   public static void main ( String args [] )
+   {
+      int a [] = {32,45,89,66,12,35,10,96,38,15,13,11,65,81,35,64,16,89,54,19};
+   
+      int n = a.length;
+      int b [] = new int [n];
+      int m = 0;
+      int i;
+      int c=0;
+      b[0] = 999999;
+      for(i=0;i<n;i++)
+      {
+         if(a[i]<=b[0])
+         {
+         b[0] = a[i];
+         c = i;
+         }
+         else
+         {
+         b[0] = b[0];
+         }
+      }
+      
+      String saida = "Resposta:\n";
+
+      saida = saida + c;
+      saida = saida + "\nFim.";
+      System.out.println(saida);
+   }
+}
