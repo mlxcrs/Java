@@ -31,6 +31,7 @@ public class Botao extends JButton{
 		layout.setVgap(15);
 		this.setLayout(layout);
 		this.setPreferredSize(new Dimension(380,25));
+		this.setMaximumSize(new Dimension(380,25));
 
 		this.add(BorderLayout.WEST,statusIcon);
 		this.add(BorderLayout.CENTER,titleLabel);

@@ -9,15 +9,25 @@ public abstract class AbstractRobot extends Thread{
 	
 	private Botao botaoDaExecucao = new Botao();
 	private Logger logPrincipal;
-	
+	private boolean running = false;
 	private JTextArea logSecundarioArea = new JTextArea(10,60);
 	public Logger logSecundario = new Logger();
 
 	public AbstractRobot(){
-		super.setName(getClass().toString());
+		super.setName(getClass().getName());
 		botaoDaExecucao.setTitle(super.getName());
 		logSecundario.setLog(logSecundarioArea);
 		logSecundario.start();
+		running = false;
+	}
+	public void pauseRobot() {
+		running = false;
+	}
+	public void continueRobot() {
+		running = true;
+	}
+	public boolean isRunning() {
+		return this.running;
 	}
 	public void setBotaoDaExecucao(Botao botaoDaExecucao) {
 		this.botaoDaExecucao = botaoDaExecucao;
@@ -46,7 +56,6 @@ public abstract class AbstractRobot extends Thread{
 	public Runnable thread = new Runnable() {
 		@Override
 		public void run() {
-			
 		}
 	};
 }

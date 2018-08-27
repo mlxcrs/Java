@@ -5,7 +5,6 @@ public class ExtraiChamadosBaixados extends AbstractRobot{
 	public void run() {
 		//**************************************************************************
 		//							Codigo do robô
-		
 		while(true) {
 			super.logSecundario.println("Baixados");
 			try {
@@ -14,7 +13,6 @@ public class ExtraiChamadosBaixados extends AbstractRobot{
 				e.printStackTrace();
 			}
 		}
-		
 		//***************************************************************************
 	}
 }

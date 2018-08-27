@@ -72,6 +72,7 @@ public class Logger {
 					}
 					catch (Exception e) {
 						printNoDB("ERRO na conexao com o banco "+e);
+						System.exit(2);
 					}
 				}
 			}
